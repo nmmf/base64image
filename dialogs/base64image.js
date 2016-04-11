@@ -415,7 +415,7 @@ CKEDITOR.dialog.add("base64imageDialog", function(editor){
 			if(!selectedImg) editor.insertElement(newImg);
 			
 			/* Resize image */
-			if(editor.plugins.imageresize) editor.plugins.imageresize.resize(editor, newImg, 800, 800);
+			if(editor.plugins.imageresize) editor.plugins.imageresize.resize(editor, newImg, t.getValueOf("tab-properties", "width"), t.getValueOf("tab-properties", "height"));
 			
 		},
 		
