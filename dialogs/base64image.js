@@ -414,6 +414,9 @@ CKEDITOR.dialog.add("base64imageDialog", function(editor){
 			/* Insert new image */
 			if(!selectedImg) editor.insertElement(newImg);
 			
+            		/* Ignore GIF resize */
+            		if (newImg.$.src.match(/data:image\/gif;base64/)) return;
+			
 			/* Resize image */
 			if(editor.plugins.imageresize) editor.plugins.imageresize.resize(editor, newImg, 800, 800);
 			
