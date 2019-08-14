@@ -10,7 +10,7 @@ CKEDITOR.plugins.add("base64image", {
 	hidpi	:	true,
     init	: 	function(editor){
 					var pluginName = 'base64imageDialog';
-					
+					editor.ui.addToolbarGroup('base64image', 'insert');
 					editor.ui.addButton("base64image", {
 						label: editor.lang.common.image,
 						command: pluginName,
